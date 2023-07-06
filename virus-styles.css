@@ -1,0 +1,267 @@
+/*Colours to use -
+Dark cyan =#008B8B
+Cornflower blue=#6495ED
+Whitesmoke =#F5F5F5
+Grey=#808080
+RebeccaPurple =#663399
+Dark grey text=#343434
+*/
+
+/*Global styles——————————————————*/
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+	color:#343434; /* this relates to text color*/
+	background-color:#F5F5F5;/*actual want is #F5F5F5*/
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	width:100%;
+}
+
+a{
+	color:#008B8B; /* text color for links*/
+}
+
+a:hover{
+	color:#696969; /* text color for links as hover over them*/
+}
+
+a:visited{
+	color:#663399; /* text color for visited links*/
+}
+
+/*Header styles——————————————————*/
+
+.green-line{
+	width:100%;
+	height:20px;
+	border-width:0;
+	margin:0;
+  padding:0;
+	background-color:#008B8B;
+	text-align:center;
+}
+
+header{
+	color:#F5F5F5;
+	background-color:#343434;
+	padding:50px 10px 10px 10px;/*padding in order top, right, bottom, left*/
+	width:100%;
+	margin:0 0 50px 0;
+}
+
+.top-nav{
+	width:100%;
+	max-width:950px;
+	margin-left:auto;
+	margin-right:auto;/*the max width and margins ensure the HOME and ABOUT tabs don't go right to edge but more centred eyeballed it and did max width 950 where max width of right-nav-and-content is 1000px*/
+	list-style-type:none; /*removes bullet points from HOME and ABOUT*/
+	display:flex;
+	justify-content:right;
+}
+
+.top-nav a{
+	padding:10px;
+	font-size:1.5em;
+}
+/*padding is added to each list item - words HOME and ABOUT - to space them out, rather than adding to the flex box defined by top-nav as a whole*/
+
+.top-nav a:link{
+	color:#F5F5F5;
+	text-decoration:none;
+}
+
+.top-nav a:visited{
+	color:#F5F5F5;
+	text-decoration:none;
+}
+
+/*--------Section for Speech title---*/
+
+.speech-title{
+	width:100%;
+	max-width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+  padding-top: 0px;
+  padding-right: 50px;
+  padding-bottom: 0px;
+  padding-left: 50px;
+}
+
+.speech-header{
+	font-weight:lighter;
+	color:#808080;
+	font-size:2em;
+}
+
+/*----a bodge to get the horizontal rule to display the way I want it on all screens----*/
+.horizontal-rule{
+	width:100%;
+	max-width:1100px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:50px;
+}
+
+
+
+/*--------div that includes right navigation index and main speech body elements ——————————————————*/
+/*This is what makes these sections appear in centre of screen rather than spanning whole width and what adds flex container*/
+
+.right-nav-and-content{
+	width:100%;
+	max-width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-between;
+}
+
+/*Sidebar styles——————————————————*/
+
+.right-nav{
+	color:#343434;
+	background-color:#F5F5F5;
+	padding: 15px 15px 15px 15px;
+	text-align:left;
+	flex:1 1 30%; /* this is to define 'grow' 'shrink' and 'basis'*/
+	height:fit-content;
+  min-width:200px;
+	overflow:hidden;
+}
+
+.speech-index{
+	list-style-type:none; /* removes the bullet points*/
+	padding:0; /*removes extra padding where bullet points would have been. Can achieve same with padding in .right-nav if have left padding less than top, bottom and right doesn't seem to be doing anything anymore after have fiddled around with other things*/
+}
+
+.list-item{
+	margin-bottom:15px;
+}
+
+.list-heading{
+	margin-bottom:20px;
+	margin-bottom:20px;
+	color:#808080;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  margin:5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover{
+  background-color:#ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/*styles to organize the main speech blocks-------*/
+
+main{
+	flex:1 1 70%;
+	overdlow:auto;
+	padding:50px 20px 200px 20px; /*padding in order top, right, bottom, left*/
+	background-color:#F5F5F5;
+}
+
+/*Bottom link to next page style----*/
+.bottomlink{
+  text-align:right;
+}
+
+
+/*Footer styles——————————————————*/
+
+footer{
+	color:#F5F5F5;
+	background-color:#008B8B;
+	padding:20px;
+	text-align:center;
+	font-size:1.25em;
+	width:100%;
+	height:80px;
+}
+
+footer a:link{
+	color:#F5F5F5;
+}
+
+footer a:visited{
+	color:#F5F5F5;
+}
+
+/*----different text styles---*/
+
+.hidden{
+  visibility:hidden;
+}
+
+.redacted{
+    color: black;
+    background-color: black;
+}
+
+.strikethrough{
+  text-decoration: line-through;
+  text-decoration-color:#008B8B;
+}
+
+.purple{
+  color:#663399;
+}
+
+.grey-bold{
+  color:#343434;
+  font-weight:bold;
+  font-size:1.5em;
+}
+
+.green{
+  color:#008B8B;
+}
+
+.grey{
+  color:#808080;
+}
+
+/*---hiding side menu on small screen---*/
+@media only screen and (max-width: 500px) {
+    .right-nav {
+        display: none;
+    }
+}
